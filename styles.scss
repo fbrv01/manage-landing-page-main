@@ -13,7 +13,8 @@
 
 // FONT //
 
-$ff: 'Be Vietnam Pro', sans-serif;
+$ff: 'Be Vietnam Pro',
+sans-serif;
 $fw-bold: 700;
 $fw-semiBold: 600;
 $fw-medium: 500;
@@ -199,6 +200,10 @@ p {
 
 }
 
+.--showMenu {
+    box-shadow: 19px 178vh 28rem 160vh rgba(0, 0, 0, 0.55);
+}
+
 /* ==================================================== */
 /* ====================== HEADER ====================== */
 /* ==================================================== */
@@ -367,14 +372,14 @@ p {
 }
 
 .swiper-pagination-bullet {
-    border: 1px solid $action-color  !important;
+    border: 1px solid $action-color !important;
     background: none !important;
     opacity: 1 !important;
     margin: 2px !important;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: $action-color  !important;
+    background-color: $action-color !important;
 }
 
 
@@ -435,6 +440,7 @@ p {
 
 #form {
     width: 100%;
+    position: relative;
 
     input {
         border: none;
@@ -467,8 +473,9 @@ p {
     font-size: 10px;
     line-height: 14.61px;
     letter-spacing: -0.08px;
-    left: 25px;
-    bottom: -25px;
+    left: 0%;
+    top: 100%;
+    margin-top: 4px;
 }
 
 .copyright {
@@ -490,7 +497,7 @@ p {
     &::before {
         content: "";
         inset: 0;
-        background-image: url(/images/bg-tablet-pattern.svg), url(/images/bg-tablet-pattern.svg);
+        background-image: url(./images/bg-tablet-pattern.svg), url(./images/bg-tablet-pattern.svg);
         background-repeat: no-repeat;
         background-position: 66vw -126px, -36rem 72rem;
         position: absolute;
@@ -559,9 +566,11 @@ p {
         flex-direction: column;
         gap: 50px;
         text-align: center;
+
         .header__left {
             width: 100%;
         }
+
         .header__right {
             display: flex;
             align-items: center;
@@ -607,13 +616,12 @@ p {
         left: 0;
         right: 0;
         background: $white-color;
-        box-shadow: 0px 10px 20px rgba(80, 86, 98, 0.03);
     }
-    
+
     .burger-btn {
         display: inline-block;
     }
-    
+
     .nav__btn {
         display: none;
     }
@@ -631,7 +639,7 @@ p {
             background-position: 2rem -1rem, 47rem -24rem;
         }
     }
-    
+
 }
 
 
@@ -779,6 +787,7 @@ p {
         width: 100%;
         display: flex;
         justify-content: center;
+        position: relative;
 
         input {
             width: 70%;

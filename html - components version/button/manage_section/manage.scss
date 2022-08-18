@@ -1,0 +1,126 @@
+/* ==================================================== */
+/* ====================== SECTION ===================== */
+/* ==================================================== */
+
+// MANAGE //
+
+.manage-section {
+    // border: 2px solid black;
+    margin-top: 132px;
+}
+
+.manage-section__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.manage__left {
+    p {
+        width: 53%;
+        margin-top: 24px;
+    }
+}
+
+.manage__right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.manage__title {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 11px;
+}
+
+.number {
+    padding: 8px 24px;
+    border-radius: 39px;
+    background: $action-color;
+    color: $white-color;
+    font-weight: $fw-bold;
+    font-size: $heading-s-fs;
+    line-height: $heading-s-lh;
+    letter-spacing: -0.29px;
+}
+
+.manage__content {
+    width: 83.5%;
+    margin-left: auto;
+}
+
+/* ==================================================== */
+/* ===================== RESPONSIVE =================== */
+/* ==================================================== */
+
+@media only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .manage-section {
+        margin-top: 100px;
+    }
+
+    .manage-section__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .manage__left {
+
+        text-align: center;
+
+        h2 {
+            width: 80%;
+            margin: auto;
+        }
+
+        p {
+            width: 85%;
+            margin: 2rem auto;
+        }
+    }
+
+    .manage__right {
+        gap: 30px;
+    }
+
+    .manage__content {
+        width: 86%;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .manage-section {
+        margin-top: 93px;
+    }
+
+    .manage__left {
+        p {
+            margin: 13px auto;
+        }
+    }
+
+    .manage__right {
+        gap: 40px;
+
+        article {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    .manage__title {
+        gap: 1rem;
+        background: #FFF0EC;
+        margin-bottom: 8px;
+    }
+
+    .manage__content {
+        width: 100%;
+        margin-left: 0;
+    }
+}

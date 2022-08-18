@@ -8,6 +8,7 @@ const body = document.querySelector('body')
 
 menuBtn.addEventListener('click', () => {
     menu.style.display = "flex"
+    menu.classList.add('--showMenu')
     closeBtn.style.display = "inline-block"
     menuBtn.style.display = "none"
     body.style.background = "linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%)"
