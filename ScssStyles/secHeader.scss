@@ -1,0 +1,52 @@
+/* ==================================================== */
+/* ====================== HEADER ====================== */
+/* ==================================================== */
+
+.sec-header {
+    margin-top: 180px;
+    padding: 62px 0;
+    background: $action-color;
+    color: $white-color;
+}
+
+.sec-header__container {
+    display: flex;
+    justify-content: space-between;
+
+    .header__left {
+        width: 40%;
+    }
+
+    .header__right {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+/* ==================================================== */
+/* ===================== RESPONSIVE =================== */
+/* ==================================================== */
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .sec-header {
+        padding: 90px 0;
+        margin-top: 42px;
+    }
+
+    .sec-header__container {
+        flex-direction: column;
+        gap: 1.8125rem;
+
+        .header__left {
+            width: 100%;
+        }
+
+        .header__right {
+            justify-content: center;
+        }
+    }
+
+}

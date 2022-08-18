@@ -1,0 +1,73 @@
+/* ==================================================== */
+/* ====================== SECTION ===================== */
+/* ==================================================== */
+
+
+.testimonials-section {
+    // border: 2px solid black;
+    text-align: center;
+    margin-top: 146px;
+}
+
+.testimonials__list {
+    padding: 102px 0 78px;
+}
+
+.testimonial {
+    border: 2px solid rgba(0, 0, 0, 0);
+    padding: 60px 40px 40px;
+    background: $card-color;
+    position: relative;
+}
+
+.avatar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+        width: 72px;
+    }
+}
+
+.testimonial__info {
+    h4 {
+        margin-bottom: 19px;
+    }
+}
+
+// SLIDER CUSTOM PAGINATION //
+.swiper-pagination {
+    position: absolute;
+    bottom: 40px !important;
+    z-index: 11;
+}
+
+.swiper-pagination-bullet {
+    border: 1px solid $action-color  !important;
+    background: none !important;
+    opacity: 1 !important;
+    margin: 2px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $action-color  !important;
+}
+
+/* ==================================================== */
+/* ===================== RESPONSIVE =================== */
+/* ==================================================== */
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .testimonials-section {
+        width: $container-width-sm;
+        margin: 62px auto 0;
+    }
+
+    .testimonial {
+        padding: 60px 30px 40px;
+    }
+}

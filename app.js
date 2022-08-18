@@ -1,7 +1,11 @@
+
+
 const menu = document.querySelector('.nav__menu')
 const menuBtn = document.querySelector('.burger-btn')
 const closeBtn = document.querySelector('.close-btn')
 const body = document.querySelector('body')
+
+
 
 menuBtn.addEventListener('click', () => {
     menu.style.display = "flex"
@@ -36,7 +40,7 @@ let swiper = new Swiper(".mySwiper", {
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-                renderBullet: function (index,className) {
+                renderBullet: function (index, className) {
                     return `<span class=${className}></span>`;
                 }
             },
@@ -50,3 +54,51 @@ let swiper = new Swiper(".mySwiper", {
         }
     },
 });
+
+
+// FORM VALIDATION // 
+
+const email = document.querySelector('#email')
+const form = document.querySelector('#form')
+const errorMsg = document.querySelector('#error')
+const successrMsg = document.querySelector('#success')
+
+
+
+form.addEventListener('submit', (e) => {
+
+    e.preventDefault()
+    let messageErrors = []
+    let mailformat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+
+   
+    if(email.value.match(mailformat)) {
+        successrMsg.style.display = "inline"
+        email.style.border = "2px solid #4BB543"
+        email.style.color = "#4BB543"
+        setTimeout(() => {
+            email.style.color = "#242D52"
+            email.value = ""
+            email.style.border = "none" 
+            successrMsg.style.display = "none"     
+        }, 2000);
+
+    } else {
+        messageErrors.push('Please insert a valid email')
+    }
+
+    if (messageErrors.length > 0) {
+        e.preventDefault()
+        errorMsg.innerHTML = messageErrors
+        email.style.color = "#F33C3C"
+        email.style.border = "2px solid #F33C3C"
+        setTimeout(() => {
+            email.style.color = "#242D52"
+            email.value = ""
+            messageErrors.splice(0,1)
+            errorMsg.innerHTML = ""
+            email.style.border = "none"      
+        }, 2000);
+    }
+})
+

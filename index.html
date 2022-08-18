@@ -5,56 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./manage.html" rel="import" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 
 <body>
-
-    <nav>
-        <div class="container nav__container">
-            <div class="nav__logo">
-                <a href="#"><img src="./images/logo.svg" alt="Manage logo"></a>
-            </div>
-            <ul role="list" class="nav__menu">
-                <li><a href="#" class="nav__link">pricing</a></li>
-                <li><a href="#" class="nav__link">product</a></li>
-                <li><a href="#" class="nav__link">about us</a></li>
-                <li><a href="#" class="nav__link">careers</a></li>
-                <li><a href="#" class="nav__link">community</a></li>
-            </ul>
-            <button class="btn orange nav__btn">
-                <a href="#">get started</a>
-            </button>
-
-            <button class="burger-btn">
-                <img src="./images/icon-hamburger.svg" alt="menu burger button">
-            </button>
-            <button class="close-btn">
-                <img src="./images/icon-close.svg" alt="close button">
-            </button>
-        </div>
-    </nav>
-
-    <header>
-        <div class="container main-header__container">
-            <div class="header__left">
-                <h1>Bring everyone together to build better products.</h1>
-                <p class="desc">
-                    Manage makes it simple for software teams to plan day-to-day
-                    tasks while keeping the larger team goals in view.
-                </p>
-                <button class="btn orange">
+    <div class="hero">
+        <nav>
+            <div class="container nav__container">
+                <div class="nav__logo">
+                    <a href="#"><img src="./images/logo.svg" alt="Manage logo"></a>
+                </div>
+                <ul role="list" class="nav__menu">
+                    <li><a href="#" class="nav__link">pricing</a></li>
+                    <li><a href="#" class="nav__link">product</a></li>
+                    <li><a href="#" class="nav__link">about us</a></li>
+                    <li><a href="#" class="nav__link">careers</a></li>
+                    <li><a href="#" class="nav__link">community</a></li>
+                </ul>
+                <button class="btn orange nav__btn">
                     <a href="#">get started</a>
                 </button>
-            </div>
-            <div class="header__right">
-                <img src="images/illustration-intro.svg" alt="charts illustration">
-            </div>
-        </div>
-    </header>
 
+                <button class="burger-btn">
+                    <img src="./images/icon-hamburger.svg" alt="menu burger button">
+                </button>
+                <button class="close-btn">
+                    <img src="./images/icon-close.svg" alt="close button">
+                </button>
+            </div>
+        </nav>
+        <header>
+            <div class="container main-header__container">
+                <div class="header__left">
+                    <h1>Bring everyone together to build better products.</h1>
+                    <p class="desc">
+                        Manage makes it simple for software teams to plan day-to-day
+                        tasks while keeping the larger team goals in view.
+                    </p>
+                    <button class="btn orange">
+                        <a href="#">get started</a>
+                    </button>
+                </div>
+                <div class="header__right">
+                    <img src="images/illustration-intro.svg" alt="charts illustration">
+                </div>
+            </div>
+        </header>
+    </div>
     <section class="manage-section">
         <div class="container manage-section__container">
             <div class="manage__left">
@@ -111,7 +111,6 @@
             </div>
         </div>
     </section>
-
     <section class="testimonials-section">
         <h2>What they’ve said</h2>
         <div class="swiper mySwiper">
@@ -188,8 +187,7 @@
             </div>
         </div>
     </header>
-
-    <footer>
+    <footer class="footer">
         <div class="container footer__container">
             <div class="footer1">
                 <div class="footer-logo">
@@ -206,13 +204,13 @@
                 </ul>
             </div>
             <div class="footer2">
-                <ul class="footer__links">
+                <ul>
                     <li><a href="#">home</a></li>
                     <li><a href="#">pricing</a></li>
                     <li><a href="#">produts</a></li>
                     <li><a href="#">about us</a></li>
                 </ul>
-                <ul class="footer__links">
+                <ul>
                     <li><a href="#">careers</a></li>
                     <li><a href="#">community</a></li>
                     <li><a href="#">privacy policy</a></li>
@@ -220,18 +218,21 @@
             </div>
             <div class="footer3">
                 <div class="footer__contact">
-                    <label for="email"></label>
-                    <input type="email" placeholder="Updates in your inbox…">
-                    <button class="btn orange shadow-none">go</button>
+                    <form id="form" action="/" method="GET">
+                        <label for="email"></label>
+                        <input id="email" name="email" type="text" placeholder="Updates in your inbox…">
+                        <button type="submit" class="btn orange shadow-none">go</button>
+                    </form>
+                    <span id="error"></span>
+                    <span id="success">Successfully subscribed !</span>
                 </div>
             </div>
             <small class="copyright">&copy;Copyright 2020. All Rights Reserved
             </small>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js" type="module"></script>
 </body>
 
 </html>
