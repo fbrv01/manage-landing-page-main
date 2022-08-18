@@ -78,46 +78,50 @@
 /* ===================== RESPONSIVE =================== */
 /* ==================================================== */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+@media only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+
+
     .footer {
         padding: 50px 0 100px;
     }
-
+    
     .footer__container,
     .footer1 {
         flex-direction: column-reverse;
+        align-items: center;
         gap: 50px;
     }
-
-    .footer1 {
-        align-items: center;
-    }
-
+    
+    
     .footer__socials {
-        width: 90%;
-        align-items: center;
-        margin: auto;
-
+        gap: 50px;
+    
         img {
             width: 2rem;
         }
     }
-
+    
     .footer2 {
+        width: 100%;
         justify-content: center;
-        gap: 80px;
+        gap: 50%;
     }
-
-    .footer__contact {
-        margin: auto;
-        flex:stre;
-
+    
+    .footer3 {
+        width: 100%;
+    }
+    
+    #form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
         input {
-            // align-items: stretch;
-            width: 100%;
+            width: 70%;
         }
     }
-
+    
     .copyright {
         margin-left: auto;
         margin-right: auto;
@@ -126,5 +130,20 @@
         bottom: -50px;
         text-align: center;
     }
+}
 
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .footer1 {
+        align-items: center;
+    }
+    
+    .footer__socials {
+        gap: 34px;
+    }
+    
+    .footer2 {
+        gap: 90px;
+    }
 }

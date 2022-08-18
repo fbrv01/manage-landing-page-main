@@ -59,6 +59,19 @@
 /* ===================== RESPONSIVE =================== */
 /* ==================================================== */
 
+@media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .testimonials-section {
+        margin: 100px auto 0;
+        width: $container-width-lg;
+    }
+}
+
+@media only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .testimonials-section {
+        width: $container-width-md;
+    }
+
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 

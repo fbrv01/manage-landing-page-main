@@ -6,7 +6,6 @@ const closeBtn = document.querySelector('.close-btn')
 const body = document.querySelector('body')
 
 
-
 menuBtn.addEventListener('click', () => {
     menu.style.display = "flex"
     closeBtn.style.display = "inline-block"
@@ -24,7 +23,7 @@ closeBtn.addEventListener('click', () => {
 // SLIDER // 
 
 let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2.5,
+    slidesPerView:  2.5,
     spaceBetween: 30,
     loop: true,
     centeredSlides: true,
@@ -34,7 +33,7 @@ let swiper = new Swiper(".mySwiper", {
     },
 
     breakpoints: {
-        320: {
+        280: {
             slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
@@ -45,8 +44,19 @@ let swiper = new Swiper(".mySwiper", {
                 }
             },
         },
-        1440: {
-            slidesPerView: 2.5,
+        520: {
+            slidesPerView:  1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return `<span class=${className}></span>`;
+                }
+            },
+        },
+        1140: {
+            slidesPerView:  2.5,
             spaceBetween: 30,
             pagination: {
                 el: null
