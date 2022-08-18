@@ -272,13 +272,12 @@ p {
 // MANAGE //
 
 .manage-section {
-    // border: 2px solid black;
     margin-top: 132px;
 }
 
 .manage-section__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: (1fr, 1fr);
 }
 
 .manage__left {
@@ -493,7 +492,7 @@ p {
         inset: 0;
         background-image: url(/images/bg-tablet-pattern.svg), url(/images/bg-tablet-pattern.svg);
         background-repeat: no-repeat;
-        background-position: 53rem -8rem, -36rem 72rem;
+        background-position: 66vw -126px, -36rem 72rem;
         position: absolute;
         z-index: -1;
     }
