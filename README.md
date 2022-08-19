@@ -34,3 +34,7 @@ Another approaches to consider:
 https://www.thinktecture.com/en/web-components/native-web-components-without-framework/
 
 https://www.w3schools.com/howto/howto_html_include.asp
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/fbrv01/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/filip-bucholc/)
